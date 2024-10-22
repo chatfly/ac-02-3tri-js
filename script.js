@@ -62,3 +62,21 @@ function ex01(){
   alert(`Votos em branco: ${branco_counter} // Porcentagem: ${branco_percentage}%`)
   alert(`Votos em nulo: ${nulo_counter} // Porcentagem: ${nulo_percentage}%`)
 }
+
+function ex02(){
+  const vendas = []
+  var venda
+
+  var venda_maior = parseFloat(0)
+  var venda_menor = parseFloat(0)
+  var venda_media = parseFloat(0)
+  var total_vendas = parseInt(0)
+
+  while(venda!=-1){
+    venda = parseInt(prompt(`Digite o valor da venda: `))
+    if(venda!=-1){
+      vendas.push(venda)
+    }
+  }
+
+}
