@@ -57,10 +57,7 @@ function ex01(){
     alert(`Algum erro ocorreu...`)
   }
 
-  alert(`Votos do candidato 1: ${candidato1_counter} // Porcentagem: ${candidato1_percentage}%`)
-  alert(`Votos do candidato 2: ${candidato2_counter} // Porcentagem: ${candidato2_percentage}%`)
-  alert(`Votos em branco: ${branco_counter} // Porcentagem: ${branco_percentage}%`)
-  alert(`Votos em nulo: ${nulo_counter} // Porcentagem: ${nulo_percentage}%`)
+  alert(`Votos do candidato 1: ${candidato1_counter} // Porcentagem: ${candidato1_percentage}%` + `Votos do candidato 2: ${candidato2_counter} // Porcentagem: ${candidato2_percentage}%` + `Votos em branco: ${branco_counter} // Porcentagem: ${branco_percentage}%` + `Votos em nulo: ${nulo_counter} // Porcentagem: ${nulo_percentage}%`)
 }
 
 function ex02(){
@@ -93,10 +90,7 @@ function ex02(){
   numero_vendas = vendas.length
   venda_media = total_vendas / numero_vendas
 
-  alert(`Maior venda: ${venda_maior}`)
-  alert(`Menor venda: ${venda_menor}`)
-  alert(`Média venda: ${venda_media}`)
-  alert(`Quantidade de vendas: ${numero_vendas}`)
+  alert(`Maior venda: ${venda_maior}` + `Menor venda: ${venda_menor}` + `Média venda: ${venda_media}` + `Quantidade de vendas: ${numero_vendas}`)
 }
 
 function ex03(){
@@ -125,14 +119,12 @@ function ex03(){
     }
   }
 
-  alert(`Foi inserido um total de: ${numeroProdutos}`)
-  alert(`A quantidade de produtos em estoque é de: ${quantidadeTotalProdutos}`)
   for(i=0; i<quantidades; i++){
     if(quantidades[i] >= quantidade[IndexMaiorEstoque]){
       IndexMaiorEstoque = i
     }
   }
-  alert(`O produto em que mais se encontra no estoque é o: ${produtos[IndexMaiorEstoque]}`)
+  alert(`Foi inserido um total de: ${numeroProdutos}` + `A quantidade de produtos em estoque é de: ${quantidadeTotalProdutos}` + `O produto em que mais se encontra no estoque é o: ${produtos[IndexMaiorEstoque]}`)
   produtoBusca = prompt(`Digite o nome do produto a ser buscado: `)
   for(i=0; i<produtos.length; i++){
     if(produtos[i] == produtoBusca){
