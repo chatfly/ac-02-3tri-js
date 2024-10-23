@@ -69,14 +69,76 @@ function ex02(){
 
   var venda_maior = parseFloat(0)
   var venda_menor = parseFloat(0)
-  var venda_media = parseFloat(0)
-  var total_vendas = parseInt(0)
+  var venda_media = 0
+  var numero_vendas = 0
+  var total_vendas = 0
 
   while(venda!=-1){
     venda = parseInt(prompt(`Digite o valor da venda: `))
     if(venda!=-1){
       vendas.push(venda)
+      venda_menor=venda
+    }
+  }
+  for(i=0; i<vendas.length; i++){
+    if (venda_maior <= vendas[i]){
+      venda_maior = vendas[i]
+    }
+    if (venda_menor >= vendas[i]){
+      venda_menor = vendas[i]
+    }
+    total_vendas+=vendas[i]
+  }
+
+  numero_vendas = vendas.length
+  venda_media = total_vendas / numero_vendas
+
+  alert(`Maior venda: ${venda_maior}`)
+  alert(`Menor venda: ${venda_menor}`)
+  alert(`Média venda: ${venda_media}`)
+  alert(`Quantidade de vendas: ${numero_vendas}`)
+}
+
+function ex03(){
+  var produtos = []
+  var quantidades = []
+
+  var produto
+  var quantidade
+  var quantidadeTotalProdutos = 0
+  var numeroProdutos = 0
+
+  var IndexMaiorEstoque = 0
+  var produtoBusca
+  var indexProdutoBusca
+
+  while(produto!=-1){
+    produto = prompt(`Digite o nome do produto: `)
+    if(produto!=-1){
+      quantidade = parseInt(prompt(`Digite a quantidade em estoque: `))
+    }
+    if(produto!=-1){
+      produtos.push(produto)
+      quantidades.push(quantidade)
+      quantidadeTotalProdutos += quantidade
+      numeroProdutos++
     }
   }
 
+  alert(`Foi inserido um total de: ${numeroProdutos}`)
+  alert(`A quantidade de produtos em estoque é de: ${quantidadeTotalProdutos}`)
+  for(i=0; i<quantidades; i++){
+    if(quantidades[i] >= quantidade[IndexMaiorEstoque]){
+      IndexMaiorEstoque = i
+    }
+  }
+  alert(`O produto em que mais se encontra no estoque é o: ${produtos[IndexMaiorEstoque]}`)
+  produtoBusca = prompt(`Digite o nome do produto a ser buscado: `)
+  for(i=0; i<produtos.length; i++){
+    if(produtos[i] == produtoBusca){
+      indexProdutoBusca = i
+      break
+    }
+  }
+  alert(`Unidades em estoque: ${quantidades[indexProdutoBusca]}`)
 }
